@@ -2,8 +2,9 @@ import armchair from "../assets/blue-chair.png";
 import chairPillow from "../assets/chair-pillow.png";
 import leatherChair from "../assets/leather-chair.png";
 import sofa from "../assets/sofa.png";
+import type { FeaturedProduct } from "../types/featuredProductsType";
 
-const featuredProducts = [
+const featuredProducts: FeaturedProduct[] = [
     {
         id: 1,
         name: "Brasslegged Armchair",

@@ -1,7 +1,7 @@
 import featuresData from "../static/featuresData";
 export default function Features() {
     return (
-        <section className="w-full bg-white px-4 md:px-8 lg:px-16 py-12 border-b border-gray-100">
+        <section className="w-full bg-white px-4 md:px-8 lg:px-16 py-12">
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
                 {featuresData.map((feature, index) => (
                     <div

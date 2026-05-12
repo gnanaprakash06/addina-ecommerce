@@ -105,7 +105,7 @@ export default function Navbar() {
                             className="text-gray-800 group-hover:text-[#C69C6D] transition-colors"
                         />
                         <span className="absolute -top-1.5 -right-2 bg-[#C69C6D] text-white text-[10px] font-bold w-5 h-5 flex items-center justify-center rounded-full border-2 border-white">
-                            0
+                            5
                         </span>
                     </div>
 
