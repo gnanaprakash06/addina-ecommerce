@@ -1,4 +1,5 @@
 import { ChevronLeft, ChevronRight } from "lucide-react";
+import featuredProducts from "../static/featuredProducts";
 import ProductGrid from "./ProductGrid";
 
 export default function FeaturedProducts() {
@@ -24,7 +25,7 @@ export default function FeaturedProducts() {
                 </button>
 
                 {/* Product Grid */}
-                <ProductGrid />
+                <ProductGrid products={featuredProducts} />
             </div>
         </section>
     );

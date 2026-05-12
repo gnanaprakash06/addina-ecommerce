@@ -1,15 +1,21 @@
 import { Star } from "lucide-react";
-import type { FeaturedProduct } from "../types/featuredProductsType";
+import type Product from "../types";
 
-export default function ProductCard({ product }: { product: FeaturedProduct }) {
+export default function ProductCard({ product }: { product: Product }) {
+    // Check if it has a badge or discount
+    const badgeText = product.badge || product.discount;
+    const badgeBg = product.badgeColor || "bg-[#C69C6D]"; // Default color
+
     return (
-        <div key={product.id} className="group/card cursor-pointer">
+        <div className="group/card cursor-pointer">
             {/* Image Container */}
             <div className="bg-[#F8F6F3] rounded-md aspect-square relative flex justify-center items-center p-6 mb-4 overflow-hidden">
-                {/* Discount Badge */}
-                {product.discount && (
-                    <span className="absolute top-3 left-3 bg-[#C69C6D] text-white text-[10px] font-bold px-2 py-1 rounded-sm z-10">
-                        {product.discount}
+                {/* Dynamic Badge */}
+                {badgeText && (
+                    <span
+                        className={`absolute top-3 left-3 text-white text-[10px] font-bold px-2 py-1 rounded-sm z-10 ${badgeBg}`}
+                    >
+                        {badgeText}
                     </span>
                 )}
 
@@ -42,7 +48,7 @@ export default function ProductCard({ product }: { product: FeaturedProduct }) {
                 </div>
 
                 {/* Price */}
-                <p className="text-sm text-gray-500">
+                <p className="text-sm text-gray-500 font-medium">
                     USD {product.price.toFixed(2)}
                 </p>
             </div>
