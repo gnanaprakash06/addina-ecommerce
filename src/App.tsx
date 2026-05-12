@@ -1,3 +1,4 @@
+import ClientFeedback from "./components/ClientFeedback";
 import FeaturedProducts from "./components/FeaturedProducts";
 import Features from "./components/Features";
 import Hero from "./components/Hero";
@@ -21,10 +22,12 @@ function App() {
 
             <HotDealBanner />
 
-            <div className="max-w-[1280px] mx-auto px-4 md:px-8 lg:px-12">
+            <div className="max-w-7xl mx-auto px-4 md:px-8 lg:px-12">
                 <TrendyCollection />
                 <SpecialOffers />
             </div>
+
+            <ClientFeedback />
         </div>
     );
 }

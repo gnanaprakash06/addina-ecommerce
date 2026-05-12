@@ -1,5 +1,5 @@
 import { Star } from "lucide-react";
-import type Product from "../types";
+import type { Product } from "../types";
 
 export default function ProductCard({ product }: { product: Product }) {
     // Check if it has a badge or discount

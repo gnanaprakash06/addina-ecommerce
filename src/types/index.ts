@@ -1,4 +1,4 @@
-export default interface Product {
+export interface Product {
     id: number;
     name: string;
     price: number;
@@ -6,5 +6,14 @@ export default interface Product {
     discount?: string | null;
     badge?: string | null;
     badgeColor?: string;
+    image: string;
+}
+
+export interface Feedback {
+    id: number;
+    name: string;
+    role: string;
+    comment: string;
+    rating: number;
     image: string;
 }

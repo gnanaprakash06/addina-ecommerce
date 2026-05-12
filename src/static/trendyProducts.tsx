@@ -6,7 +6,7 @@ import nobodyArmChair from "../assets/leather-chair.png";
 import realisticSofa from "../assets/realistic-sofa.png";
 import alexanderSofa from "../assets/sofa.png";
 import woodenChair from "../assets/wooden-chair.png";
-import type Product from "../types";
+import type { Product } from "../types";
 
 const trendyProducts: Product[] = [
     {
