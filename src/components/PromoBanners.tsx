@@ -5,7 +5,6 @@ import wickerChair from "../assets/wicker-chair.png";
 export default function PromoBanners() {
     return (
         <section className="w-full px-4 md:px-8 lg:px-16 py-8">
-            {/* 2-Column Grid */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 {/* --- Banner 1: Wicker Hanging Chairs --- */}
                 <div className="bg-[#EBF9FD] rounded-sm p-8 sm:p-10 relative overflow-hidden flex items-center min-h-60 group">

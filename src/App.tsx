@@ -1,3 +1,4 @@
+import FeaturedProducts from "./components/FeaturedProducts";
 import Features from "./components/Features";
 import Hero from "./components/Hero";
 import Navbar from "./components/NavBar";
@@ -10,6 +11,7 @@ function App() {
             <Hero />
             <Features />
             <PromoBanners />
+            <FeaturedProducts />
         </div>
     );
 }
