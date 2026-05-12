@@ -24,7 +24,6 @@ export default function HotDealBanner() {
                     </div>
                 </div>
 
-                {/* --- Right: Image Area --- */}
                 <div className="w-full lg:w-1/2 relative z-10">
                     <img
                         src={livingRoomImg}
@@ -32,7 +31,6 @@ export default function HotDealBanner() {
                         className="w-full h-full min-h-100 lg:min-h-125 object-cover"
                     />
 
-                    {/* Render the Hotspots (Dots + Tooltips) */}
                     {hotspots.map((spot) => (
                         <div
                             key={spot.id}

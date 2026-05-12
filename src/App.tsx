@@ -1,10 +1,14 @@
+import BestSeller from "./components/BestSeller";
 import ClientFeedback from "./components/ClientFeedback";
 import FeaturedProducts from "./components/FeaturedProducts";
 import Features from "./components/Features";
+import Footer from "./components/Footer";
 import Hero from "./components/Hero";
 import HotDealBanner from "./components/HotDealBanner";
 import Navbar from "./components/NavBar";
+import Newsletter from "./components/NewsLetter";
 import PromoBanners from "./components/PromoBanners";
+import RecentBlog from "./components/RecentBlog";
 import SpecialOffers from "./components/SpecialOffers";
 import TrendyCollection from "./components/TrendyCollection";
 
@@ -13,21 +17,17 @@ function App() {
         <div className="min-h-screen bg-white">
             <Navbar />
             <Hero />
-
-            <main className="max-w-7xl mx-auto px-4 md:px-8 lg:px-12 space-y-12">
-                <Features />
-                <PromoBanners />
-                <FeaturedProducts />
-            </main>
-
+            <Features />
+            <PromoBanners />
+            <FeaturedProducts />
             <HotDealBanner />
-
-            <div className="max-w-7xl mx-auto px-4 md:px-8 lg:px-12">
-                <TrendyCollection />
-                <SpecialOffers />
-            </div>
-
+            <TrendyCollection />
+            <SpecialOffers />
             <ClientFeedback />
+            <BestSeller />
+            <RecentBlog />
+            <Newsletter />
+            <Footer />
         </div>
     );
 }

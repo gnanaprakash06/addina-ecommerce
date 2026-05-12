@@ -14,7 +14,6 @@ export default function ClientFeedback() {
             }}
         >
             <div className="max-w-7xl mx-auto px-4 md:px-8 lg:px-12 relative z-10">
-                {/* --- 1. Centered Section Header --- */}
                 <div className="text-center mb-12">
                     <span className="inline-block bg-[#444] text-white text-[10px] font-bold px-3 py-1 tracking-widest uppercase mb-3">
                         Testimonials
@@ -24,14 +23,12 @@ export default function ClientFeedback() {
                     </h2>
                 </div>
 
-                {/* --- 2. Feedback Cards Grid --- */}
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     {feedbacks.map((feedback) => (
                         <div
                             key={feedback.id}
                             className="bg-white p-8 md:p-10 rounded-sm shadow-sm hover:shadow-md transition-shadow duration-300 relative"
                         >
-                            {/* Decorative Quote Icon Background */}
                             <div className="absolute top-8 right-8 text-gray-100">
                                 <Quote
                                     size={60}
@@ -41,7 +38,6 @@ export default function ClientFeedback() {
                             </div>
 
                             <div className="relative z-10">
-                                {/* Star Rating */}
                                 <div className="flex items-center gap-1 mb-6">
                                     {[...Array(5)].map((_, i) => (
                                         <Star
@@ -56,12 +52,10 @@ export default function ClientFeedback() {
                                     ))}
                                 </div>
 
-                                {/* Comment Text */}
                                 <p className="text-gray-600 text-[15px] leading-relaxed mb-8 italic">
                                     "{feedback.comment}"
                                 </p>
 
-                                {/* User Info (Avatar + Name) */}
                                 <div className="flex items-center gap-4">
                                     <div className="w-14 h-14 rounded-full overflow-hidden border-2 border-[#EEDCC9]">
                                         <img
