@@ -1,8 +1,11 @@
 import { ChevronRight, Star } from "lucide-react";
+import { useState } from "react";
 import livingRoomImg from "../assets/living-room-bg.jpg";
 import hotspots from "../static/hotspots";
 
 export default function HotDealBanner() {
+    const [activeTooltip, setActiveTooltip] = useState<number | null>(null);
+
     return (
         <section className="w-full my-12 lg:my-20">
             <div className="flex flex-col lg:flex-row items-stretch w-full bg-[#EAE6DF]">
@@ -24,26 +27,44 @@ export default function HotDealBanner() {
                     </div>
                 </div>
 
-                <div className="w-full lg:w-1/2 relative z-10">
+                <div
+                    className="w-full lg:w-1/2 relative z-10"
+                    onClick={() => setActiveTooltip(null)}
+                >
                     <img
                         src={livingRoomImg}
                         alt="Living Room"
-                        className="w-full h-full min-h-100 lg:min-h-125 object-cover"
+                        className="w-full h-full min-h-100 lg:min-h-125 object-cover pointer-events-none"
                     />
 
                     {hotspots.map((spot) => (
                         <div
                             key={spot.id}
-                            className="absolute group cursor-pointer z-30"
+                            className="absolute z-30 cursor-pointer"
                             style={{ top: spot.top, left: spot.left }}
+                            onMouseEnter={() => setActiveTooltip(spot.id)}
+                            onMouseLeave={() => setActiveTooltip(null)}
+                            onClick={(e) => {
+                                e.stopPropagation();
+                                setActiveTooltip(
+                                    activeTooltip === spot.id ? null : spot.id
+                                );
+                            }}
                         >
+                            {/* 1. The Pulsing Dot */}
                             <div className="relative flex items-center justify-center w-8 h-8 -translate-x-1/2 -translate-y-1/2">
                                 <div className="absolute w-full h-full bg-white/40 rounded-full animate-ping opacity-75"></div>
                                 <div className="absolute w-full h-full bg-white/40 rounded-full"></div>
                                 <div className="w-3 h-3 bg-white rounded-full z-10 shadow-sm"></div>
                             </div>
 
-                            <div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-3 bg-white px-4 py-3 shadow-xl rounded-sm opacity-0 group-hover:opacity-100 transition-all duration-300 pointer-events-none w-max translate-y-2 group-hover:translate-y-0">
+                            <div
+                                className={`absolute bottom-full left-1/2 -translate-x-1/2 mb-3 bg-white px-4 py-3 shadow-xl rounded-sm transition-all duration-300 pointer-events-none w-max ${
+                                    activeTooltip === spot.id
+                                        ? "opacity-100 translate-y-0"
+                                        : "opacity-0 translate-y-2"
+                                }`}
+                            >
                                 <h4 className="text-[13px] font-bold text-gray-900 mb-1">
                                     {spot.name}
                                 </h4>

@@ -2,7 +2,7 @@ const hotspots = [
     {
         id: 1,
         top: "68%",
-        left: "45%", // Table kita
+        left: "45%",
         name: "Dining Table",
         rating: 4,
         price: 190.0,
@@ -10,7 +10,7 @@ const hotspots = [
     {
         id: 2,
         top: "45%",
-        left: "75%", // Sofa kita
+        left: "75%",
         name: "Seater Gray Sofa",
         rating: 5,
         price: 300.0,
